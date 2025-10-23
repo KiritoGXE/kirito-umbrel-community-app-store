@@ -17,3 +17,13 @@ services:
       - ./docker/servers:/crafty/servers
       - ./docker/config:/crafty/app/config
       - ./docker/import:/crafty/import
+    dns:
+      - 8.8.8.8
+      - 1.1.1.1
+    networks:
+      - umbrel_main_network
+      - bridge
+
+networks:
+  umbrel_main_network:
+    external: true

@@ -1,6 +1,7 @@
 services:
   crafty:
     container_name: crafty_container
+    network_mode: host
     image: registry.gitlab.com/crafty-controller/crafty-4:4.5.5
     restart: always
     environment:
@@ -17,13 +18,3 @@ services:
       - ./docker/servers:/crafty/servers
       - ./docker/config:/crafty/app/config
       - ./docker/import:/crafty/import
-    dns:
-      - 8.8.8.8
-      - 1.1.1.1
-    networks:
-      - umbrel_main_network
-      - bridge
-
-networks:
-  umbrel_main_network:
-    external: true

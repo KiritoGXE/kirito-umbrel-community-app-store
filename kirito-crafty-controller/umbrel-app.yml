@@ -33,7 +33,30 @@ gallery:
   - https://i.imgur.com/8cTkoj9.png
   - https://i.imgur.com/DnwgLOR.png
 releaseNotes: >-
-  Version 4.5.5 fixes bugs by refactoring the upload process to ensure asynchronous file operations. It also removes all third-party font requests.
+  4.5.5 - 2025/10/14
+
+
+  Bug fixes
+
+  Fix MFA login failure when the totp dict's attempted codes list changes size while being processed (Merge Request)
+  Resolve additional json being appended to downloaded files (Merge Request)
+  Fix certain users not showing up following a change made in 4.5.0 (Merge Request)
+  Fix password dialogue closing with no indicator the password did not change when the passwords did not match (Merge Request)
+  Fix empty 'Reason' when banning user from crafty UI (Merge Request)
+
+
+  Tweaks
+
+  Remove triple option for validation and use sole robust error (Merge Request)
+  Allow numeric passwords (Merge Request)
+  Enable use of <enter> key for password form submission (Merge Request)
+  Add extended debug logging to help troubleshoot MFA issues (Merge Request)
+  Change upload progress bar to monitor chunk processing (Merge Request)
+
+
+  Lang
+
+  Consolidate "passLength" & "numbericPassword" to single "passProp" translation for validators (Merge Request)
 dependencies: []
 path: "https://umbrel-gaming:18443"
 defaultUsername: ""
